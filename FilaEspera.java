@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class FilaEspera {
-    private Queue<String> fila = new LinkedList<>();
+    private final Queue<String> fila = new LinkedList<>();
 
     public void entrarNaFila(String usuario) {
         fila.add(usuario);
