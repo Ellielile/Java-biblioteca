@@ -1,17 +1,3 @@
-class Livro {
-    String titulo;
-    String autor;
-    int ano;
-    Livro proximo;
-
-    public Livro(String titulo, String autor, int ano) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.ano = ano;
-        this.proximo = null;
-    }
-}
-
 public class ListaLivros {
     Livro inicio;
 

@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 public class HistoricoNavegacao {
-    private Stack<String> historico = new Stack<>();
+    private final Stack<String> historico = new Stack<>();
 
     public void visualizarLivro(String titulo) {
         historico.push(titulo);
