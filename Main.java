@@ -1,10 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        ListaLivros lista = new ListaLivros();
 
-        lista.adicionar("Dom Casmurro", "Machado de Assis", 1899);
-        lista.adicionar("1984", "George Orwell", 1949);
+        // FILA
+        FilaEspera fila = new FilaEspera();
+        fila.entrarNaFila("Ellen");
+        fila.entrarNaFila("João");
 
-        lista.listar();
+        System.out.println("Atendido: " + fila.atender());
+        fila.mostrarFila();
+
+
+        // PILHA
+        HistoricoNavegacao historico = new HistoricoNavegacao();
+        historico.visualizarLivro("Dom Casmurro");
+        historico.visualizarLivro("1984");
+
+        historico.mostrarHistorico();
+
+        System.out.println("Voltando: " + historico.voltar());
+        historico.mostrarHistorico();
     }
 }
