@@ -18,8 +18,10 @@ public class Livro {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Livro)) return false;
+        if (this == o)
+            return true;
+        if (!(o instanceof Livro))
+            return false;
         Livro livro = (Livro) o;
         return titulo.equals(livro.titulo);
     }

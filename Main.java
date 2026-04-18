@@ -31,17 +31,17 @@ public class Main {
         GrafoLivros grafo = new GrafoLivros();
 
         Livro l1 = new Livro("Assim Falou Zaratustra", "Nietzsche", 1883);
-Livro l2 = new Livro("O Mito de Sísifo", "Camus", 1942);
-Livro l3 = new Livro("A República", "Platão", -380);
-Livro l4 = new Livro("Meditações", "Marco Aurélio", 180);
-Livro l5 = new Livro("O Príncipe", "Maquiavel", 1532);
-Livro l6 = new Livro("Além do Bem e do Mal", "Nietzsche", 1886);
-Livro l7 = new Livro("Ser e Nada", "Sartre", 1943);
-Livro l8 = new Livro("A Náusea", "Sartre", 1938);
-Livro l9 = new Livro("Discurso do Método", "Descartes", 1637);
-Livro l10 = new Livro("Crítica da Razão Pura", "Kant", 1781);
+        Livro l2 = new Livro("O Mito de Sísifo", "Camus", 1942);
+        Livro l3 = new Livro("A República", "Platão", -380);
+        Livro l4 = new Livro("Meditações", "Marco Aurélio", 180);
+        Livro l5 = new Livro("O Príncipe", "Maquiavel", 1532);
+        Livro l6 = new Livro("Além do Bem e do Mal", "Nietzsche", 1886);
+        Livro l7 = new Livro("Ser e Nada", "Sartre", 1943);
+        Livro l8 = new Livro("A Náusea", "Sartre", 1938);
+        Livro l9 = new Livro("Discurso do Método", "Descartes", 1637);
+        Livro l10 = new Livro("Crítica da Razão Pura", "Kant", 1781);
 
-        Livro[] livros = {l1,l2,l3,l4,l5,l6,l7,l8,l9,l10};
+        Livro[] livros = { l1, l2, l3, l4, l5, l6, l7, l8, l9, l10 };
 
         for (Livro l : livros) {
             grafo.adicionarLivro(l);
@@ -77,7 +77,13 @@ Livro l10 = new Livro("Crítica da Razão Pura", "Kant", 1781);
 
         grafo.adicionarRecomendacao(l10, l1);
         grafo.adicionarRecomendacao(l10, l2);
+        grafo.adicionarRecomendacao(l3, l2);
 
         grafo.recomendar(l1);
+        grafo.recomendarPorDistancia(l1);
+        {
+            System.out.println("\nTOTAL: " + grafo.djikstraSimples(l1).size());
+
+        }
     }
 }
